@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Laguer {
+    - _beta: float
+    - _sigma: float
+    + __init__(beta: float = 2, sigma: float = 4)
+    + lagger(t: float, n: int): float
+    + tabulate_lagger(T: float, n: int): DataFrame
+    + experiment(epsilon: float = 1e-3, N: int = 20): Tuple[float, DataFrame]
+    + quad(f: function, a: float, b: float, N: int = 10000): float
+    + lagger_transformation(f: function, n: int): float
+    + tabulate_tranformation(f: function, N: int): List
+    + reversed_lagger_transformation(h_list: List, t: float): float
+    + plot_lagger(T: float, N: int)
+    + plot_transformation(f: function, n: int)
+    + plot_tranformations(f: function, n: int, t1: float = 0, t2: float = 2 * np.pi)
+}
+@enduml
